@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BatikAdminManagerApp</string>
+    <string name="todo">imageAdd</string>
+    <string name="batik">BATIK</string>
+    <string name="login">Login</string>
+    <string name="assisten">Assisten</string>
+    <string name="signup">Sign up</string>
+    <string name="enter_user_name">Enter user name</string>
+    <string name="enter_password">Password</string>
+    <string name="register">Register</string>
+    <string name="conform_password">Conform password</string>
+    <string name="p_password">Enter password</string>
+    <string name="submit">submitbtn</string>
+
+    signup
+</resources>
