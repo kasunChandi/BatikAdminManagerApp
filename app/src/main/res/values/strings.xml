@@ -11,6 +11,8 @@
     <string name="conform_password">Conform password</string>
     <string name="p_password">Enter password</string>
     <string name="submit">Submit</string>
+    <string name="navigation_drawer_open"> open navigation</string>
+    <string name="navigation_drawer_close"> close navigation</string>
 
     signup
 </resources>

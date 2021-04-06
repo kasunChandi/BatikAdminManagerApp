@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/myMenu"
+            android:title="title1" />
+        <item
+            android:id="@+id/myMenu2"
+            android:title="title2" />
+        <item
+            android:id="@+id/myMenu3"
+            android:title="title3"
+            />
+    </group>
+
+    <group android:checkableBehavior="single">
+
+        <item android:title="title4" >
+            <menu>
+                <item  android:id="@+id/myAccount"
+                    android:title="title4.4" />
+                <item  android:id="@+id/mySetting"
+                    android:title="My Setting" />
+            </menu>
+        </item>
+    </group>
+</menu>
