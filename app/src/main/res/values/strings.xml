@@ -13,6 +13,11 @@
     <string name="submit">Submit</string>
     <string name="navigation_drawer_open"> open navigation</string>
     <string name="navigation_drawer_close"> close navigation</string>
+    <string name="ok_to_back">baktoMain</string>
+    <string name="sails">Sale</string>
+    <string name="Purchase">Purchase</string>
+    <string name="Storage">Storage</string>
+    <string name="CusOrd">Custom Orders</string>
 
     signup
 </resources>

@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainMenuActivity"
     android:fitsSystemWindows="true"
+    android:background="@drawable/ic_menucolour"
     >
 
     <!--  <include
@@ -52,14 +53,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
+     <ImageView
             android:id="@+id/imageView2"
             android:layout_width="186dp"
             android:layout_height="223dp"
             android:layout_marginTop="65dp"
             android:layout_marginEnd="15dp"
             android:layout_marginRight="15dp"
-            android:contentDescription="@string/login"
+            android:contentDescription="@string/todo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/scr_logo2" />
@@ -71,7 +72,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="124dp"
-            android:fontFamily="@font/assistant_extralight"
+            android:fontFamily="@font/abeezee"
             android:text="@string/assisten"
             android:textColor="@color/black"
             android:textSize="18sp"
@@ -88,7 +89,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2">
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            >
 
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
@@ -98,7 +100,9 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_tilecolour"
+                   >
 
                     <ImageView
                         android:id="@+id/imageView"
@@ -106,13 +110,13 @@
                         android:layout_height="170dp"
                         android:layout_centerHorizontal="true"
                         android:contentDescription="@string/login"
-                        app:srcCompat="@drawable/scr_logo2" />
+                        android:src="@drawable/ic_baseline_point_of_sale_24"/>
 
                     <TextView
                         android:id="@+id/textView3"
                         android:layout_width="65dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/batik"
+                        android:text="@string/sails"
                         android:textColor="@color/black"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -126,21 +130,22 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_tilecolour">
 
 
 
                     <ImageView
                         android:id="@+id/imageView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
                         android:contentDescription="@string/login"
-                        app:srcCompat="@drawable/scr_logo2" />
+                        android:src="@drawable/ic_baseline_addchart_24" />
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="65dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/batik"
+                        android:text="@string/Purchase"
                         android:textColor="@color/black"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -166,7 +171,8 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_tilecolour">
 
                     <ImageView
                         android:id="@+id/imageView4"
@@ -174,13 +180,13 @@
                         android:layout_height="170dp"
                         android:layout_centerHorizontal="true"
                         android:contentDescription="@string/login"
-                        app:srcCompat="@drawable/scr_logo2" />
+                        android:src="@drawable/ic_baseline_add_shopping_cart_24" />
 
                     <TextView
                         android:id="@+id/textView5"
                         android:layout_width="65dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/batik"
+                        android:text="@string/Storage"
                         android:textColor="@color/black"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -194,25 +200,27 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_tilecolour">
 
 
 
                     <ImageView
                         android:id="@+id/imageView5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="170dp"
+                        android:layout_height="175dp"
                         android:contentDescription="@string/login"
-                        app:srcCompat="@drawable/scr_logo2" />
+                        android:src="@drawable/ic_baseline_grain_24" />
                     <TextView
                         android:id="@+id/textView6"
                         android:layout_width="95dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/batik"
+                        android:text="@string/CusOrd"
                         android:textColor="@color/black"
                         android:textStyle="bold" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
+
 
         </LinearLayout>
 

@@ -63,7 +63,7 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
         switch (v.getId()){
             case R.id.imageView :
                 Toast.makeText(MainMenuActivity.this,"Food item 1", Toast.LENGTH_LONG).show();
-              //  startActivity(new Intent(MainMenuActivity.this, QRcodeReader.class));
+                startActivity(new Intent(MainMenuActivity.this, TotalSalesActivity.class));
                 break;
             case R.id.imageView3 :
                 Toast.makeText(MainMenuActivity.this,"Food item 2", Toast.LENGTH_LONG).show();
