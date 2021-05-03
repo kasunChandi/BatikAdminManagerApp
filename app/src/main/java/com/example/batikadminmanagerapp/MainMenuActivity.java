@@ -67,12 +67,15 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.imageView3 :
                 Toast.makeText(MainMenuActivity.this,"Food item 2", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(MainMenuActivity.this, PurchaseActivity.class));
                 break;
             case R.id.imageView4 :
                 Toast.makeText(MainMenuActivity.this,"Food item 3", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(MainMenuActivity.this, TotalSalesActivity.class));
                 break;
             case R.id.imageView5 :
                 Toast.makeText(MainMenuActivity.this,"Food item 4", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(MainMenuActivity.this, CustomOrderActivity.class));
                 break;
         }
     }

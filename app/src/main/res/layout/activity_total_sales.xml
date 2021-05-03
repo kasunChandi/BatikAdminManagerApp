@@ -6,7 +6,8 @@
     android:orientation="vertical"
     android:gravity="center"
     android:layout_height="match_parent"
-    tools:context=".TotalSalesActivity">
+    tools:context=".TotalSalesActivity"
+    android:background="@drawable/ic_tilecolour">
 
 
 <com.github.mikephil.charting.charts.BarChart
