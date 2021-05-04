@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class TotalSalesActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button backToMAnu;
+    Button backToMAnu,nextToMenu , viewAdd;;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,15 +28,22 @@ public class TotalSalesActivity extends AppCompatActivity implements View.OnClic
         backToMAnu = findViewById(R.id.btnOk);
         backToMAnu.setOnClickListener(this);
 
+
+        nextToMenu = findViewById(R.id.btnAdd);
+        nextToMenu.setOnClickListener(this);
+
+        viewAdd = findViewById(R.id.btnView);
+        viewAdd.setOnClickListener(this);
+
+
         BarChart barChart = findViewById(R.id.barChart) ;
         ArrayList<BarEntry> Visitors = new ArrayList<>();
-        Visitors.add(new BarEntry(2014,450));
-        Visitors.add(new BarEntry(2015,850));
-        Visitors.add(new BarEntry(2016,450));
-        Visitors.add(new BarEntry(2017,550));
-        Visitors.add(new BarEntry(2018,650));
+        Visitors.add(new BarEntry(2016,850));
+        Visitors.add(new BarEntry(2017,450));
+        Visitors.add(new BarEntry(2018,550));
+        Visitors.add(new BarEntry(2019,650));
 
-        BarDataSet barDataSet = new BarDataSet(Visitors, "Visiters");
+        BarDataSet barDataSet = new BarDataSet(Visitors, "Total Sales");
         barDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
         barDataSet.setValueTextColor(Color.BLACK);
         barDataSet.setValueTextSize(16f);
@@ -53,6 +60,15 @@ public class TotalSalesActivity extends AppCompatActivity implements View.OnClic
         switch (v.getId()){
             case R.id.btnOk :
                 startActivity(new Intent(TotalSalesActivity.this, MainMenuActivity.class));
+                break;
+
+
+            case  R.id.btnAdd :
+                startActivity(new Intent(TotalSalesActivity.this, AddSales.class));
+                break;
+
+            case R.id.btnView :
+                startActivity(new Intent(TotalSalesActivity.this, viewData.class));
                 break;
         }
 

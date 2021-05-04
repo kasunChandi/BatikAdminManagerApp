@@ -18,6 +18,8 @@
     <string name="Purchase">Purchase</string>
     <string name="Storage">Storage</string>
     <string name="CusOrd">Custom Orders</string>
+    <string name="add_record">Add Record</string>
+    <string name="view_recode">View Recode</string>
 
     signup
 </resources>
