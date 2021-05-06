@@ -17,7 +17,7 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import java.util.ArrayList;
 
 public class PurchaseActivity extends AppCompatActivity implements View.OnClickListener {
-    Button backToMAnu;
+    Button backToMAnu,nextToMenu1 , viewAdd1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +25,12 @@ public class PurchaseActivity extends AppCompatActivity implements View.OnClickL
 
         backToMAnu = findViewById(R.id.btnOk);
         backToMAnu.setOnClickListener(this);
+
+        nextToMenu1 = findViewById(R.id.btnAdd);
+        nextToMenu1.setOnClickListener(this);
+
+        viewAdd1 = findViewById(R.id.btnView);
+        viewAdd1.setOnClickListener(this);
 
         BarChart barChart = findViewById(R.id.barChart) ;
         ArrayList<BarEntry> Visitors = new ArrayList<>();
@@ -51,6 +57,14 @@ public class PurchaseActivity extends AppCompatActivity implements View.OnClickL
         switch (v.getId()){
             case R.id.btnOk :
                 startActivity(new Intent(PurchaseActivity.this, MainMenuActivity.class));
+                break;
+
+            case R.id.btnAdd :
+                startActivity(new Intent(PurchaseActivity.this, AddPurchase.class));
+                break;
+
+            case R.id.btnView :
+                startActivity(new Intent(PurchaseActivity.this, viewData.class));
                 break;
         }
     }

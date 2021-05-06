@@ -12,11 +12,18 @@ public class DBConnection extends SQLiteOpenHelper
 {
     public static  final String DATABASENAME ="BatikNew";
     public static  final String TABLENAME ="BatikSalesData";
+    public static  final String TABLENAME2 ="BatikPurchaseData";
     public static  final String col1 ="Id";
     public static  final String col2 ="SALES";
     public static  final String col3 ="TYPE";
     public static  final String col4 ="QTY";
     public static  final String col5 ="UPRICE";
+    public static  final String col01 ="PId";
+    public static  final String col02 ="PURCHASE";
+    public static  final String col03 ="PTYPE";
+    public static  final String col04 ="QTY";
+    public static  final String col05 ="UPRICE";
+    public static  final String col06 ="ITEMNAME";
 
     public DBConnection(@Nullable Context context) {
         super(context, DATABASENAME, null,1);
@@ -28,11 +35,15 @@ public class DBConnection extends SQLiteOpenHelper
 
         String createTable = "CREATE TABLE " +TABLENAME + "(Id INTEGER PRIMARY KEY AUTOINCREMENT, " + "SALES TEXT,TYPE TEXT, QTY TEXT,  UPRICE TEXT)";
         db.execSQL(createTable);
+        String createTable2 = "CREATE TABLE " +TABLENAME2 + "(PId INTEGER PRIMARY KEY AUTOINCREMENT, " + "PURCHASE TEXT,PTYPE TEXT, QTY TEXT,  UPRICE TEXT, ITEMNAME TEXT)";
+        db.execSQL(createTable2);
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF  EXISTS " + TABLENAME);
+        db.execSQL("DROP TABLE IF  EXISTS " + TABLENAME2);
         onCreate(db);
 
     }
@@ -62,6 +73,27 @@ public class DBConnection extends SQLiteOpenHelper
         String query = "SELECT * FROM " + TABLENAME;
         Cursor data = db.rawQuery(query,null);
         return data;
+    }
+
+    public  boolean addPurData (String  Purchase, String Ptype, String Qty, String Uprice, String Iname){
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues1 = new ContentValues();
+        contentValues1.put(col02,Purchase);
+        contentValues1.put(col03,Ptype);
+        contentValues1.put(col04,Qty);
+        contentValues1.put(col05,Uprice);
+        contentValues1.put(col06,Iname);
+
+        long result = db.insert(TABLENAME2, null, contentValues1);
+
+        if(result == -1){
+            return false;
+        }
+        else {
+            return  true;
+        }
+
     }
 
 

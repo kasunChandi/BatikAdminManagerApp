@@ -20,6 +20,7 @@
     <string name="CusOrd">Custom Orders</string>
     <string name="add_record">Add Record</string>
     <string name="view_recode">View Recode</string>
+    <string name="save_data">Save Data</string>
 
     signup
 </resources>

@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BatikAdminManagerApp">
-        <activity android:name=".viewData"></activity>
+        <activity android:name=".viewCustomOrder"></activity>
+        <activity android:name=".addCustomOrder" />
+        <activity android:name=".AddPurchase" />
+        <activity android:name=".viewData" />
         <activity android:name=".AddSales" />
         <activity android:name=".CustomOrderActivity" />
         <activity android:name=".PurchaseActivity" />
